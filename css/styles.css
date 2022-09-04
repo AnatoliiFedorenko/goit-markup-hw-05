@@ -69,6 +69,10 @@ img {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo:hover,
@@ -115,6 +119,10 @@ nav {
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -163,6 +171,10 @@ nav {
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts a:hover,
@@ -174,6 +186,10 @@ nav {
   display: flex;
   align-items: center;
   color: #757575;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-icon {
@@ -233,6 +249,10 @@ nav {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .solution-button:hover,
@@ -241,7 +261,7 @@ nav {
   background-color: var(--primary-white-color);
 }
 
-/* бекдроп */
+/* бекдроп + модалка */
 
 .backdrop {
   position: fixed;
@@ -482,6 +502,10 @@ nav {
   align-items: center;
 
   border-radius: 50%;
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon {
@@ -533,6 +557,10 @@ nav {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 6px;
+
+  transition-property: background-color, color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
@@ -569,6 +597,10 @@ nav {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-bottom:hover,
@@ -588,6 +620,10 @@ nav {
 
   font-size: 14px;
   line-height: 1.7;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-bottom a:hover,
@@ -645,6 +681,10 @@ nav {
   border-radius: 50%;
 
   background: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-icon {
@@ -678,7 +718,7 @@ nav {
   justify-content: center;
 }
 
-.portfolio-buttons .button-item {
+.button-item {
   display: flex;
   border: 1px solid transparent;
   border-radius: 6px;
@@ -692,14 +732,18 @@ nav {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
+
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-buttons .item + .item {
   margin-left: 8px;
 }
 
-.portfolio-buttons .button-item:hover,
-.portfolio-buttons .button-item:focus {
+.button-item:hover,
+.button-item:focus {
   background-color: var(--accent-text-color);
   color: var(--primary-white-color);
 
@@ -721,6 +765,10 @@ nav {
   margin-bottom: 30px;
   width: 370px;
   height: 404px;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-flex:hover,
@@ -761,6 +809,7 @@ nav {
 
 .thumb {
   position: relative;
+  overflow: hidden;
 }
 
 .thumb::before {
@@ -771,10 +820,18 @@ nav {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
+
+  transform: translateY(100%);
+
+  transition-property: opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.first:hover .thumb:before {
+.first:hover .thumb:before,
+.first:focus .thumb:before {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .product-content {
@@ -787,12 +844,18 @@ nav {
   width: 322px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 120%);
 
   opacity: 0;
+
+  transition-property: opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.first:hover .product-content {
+.first:hover .product-content,
+.first:focus .product-content {
   color: var(--primary-white-color);
   opacity: 1;
+  transform: translate(-50%, -50%);
 }
