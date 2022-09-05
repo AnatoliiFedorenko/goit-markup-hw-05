@@ -99,14 +99,6 @@ nav {
   margin-left: 50px;
 }
 
-/* site-nav .item {
-  margin-right: 50px;
-} */
-
-/* .site-nav .item:not(:last child) {
-  margin-right: 50px;
-} */
-
 .site-nav .link {
   display: block;
   padding-top: 32px;
@@ -146,7 +138,7 @@ nav {
 
   width: 100%;
   height: 4px;
-  border-radius: 5px;
+  border-radius: 4px;
 
   background-color: var(--accent-text-color);
 }
@@ -234,7 +226,7 @@ nav {
   display: block;
   margin: 0 auto;
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 10px 32px;
   min-width: 216px;
 
@@ -287,10 +279,12 @@ nav {
 
   background-color: #fff;
   /* background-color: red; */
+
+  border-radius: 4px;
 }
 
 .backdrop.is-hidden {
-  visibility: hidden;
+  /* visibility: hidden; */
   opacity: 0;
   pointer-events: none;
 }
@@ -312,6 +306,8 @@ nav {
   border-radius: 50%;
 
   background-color: var(--primary-white-color);
+
+  cursor: pointer;
 }
 
 /* переваги */
@@ -375,12 +371,12 @@ nav {
   background-color: #f5f4fa;
 
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 .advantages-icon {
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 4px;
   /* outline: 2px solid red; */
 }
 
@@ -555,7 +551,7 @@ nav {
 
   color: #afb1b8;
   border: 1px solid #afb1b8;
-  border-radius: 6px;
+  border-radius: 4px;
 
   transition-property: background-color, color, border;
   transition-duration: 250ms;
@@ -570,7 +566,7 @@ nav {
 .clients-link:focus {
   color: var(--accent-text-color);
   border: 1px solid var(--accent-text-color);
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 /* Підвал */
@@ -630,9 +626,8 @@ nav {
   color: var(--accent-text-color);
 }
 
-.address a {
+.contacts-address {
   color: var(--primary-white-color);
-  text-decoration: none;
 }
 
 .address a:hover,
@@ -720,7 +715,7 @@ nav {
 .button-item {
   display: flex;
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 6px 22px;
 
   color: var(--primary-text-color);
